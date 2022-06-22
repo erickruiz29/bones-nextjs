@@ -1,0 +1,128 @@
+.domino {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 8rem;
+    aspect-ratio: 2 / 1;
+    border: 2px solid grey;
+    padding: .25rem 0;
+    border-radius: .5rem;
+    margin: .5rem;
+}
+
+.dot {
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.separator {
+    height: 100%;
+    width: 2px;
+    background-color: grey;
+}
+
+.left,
+.right {
+    display: grid;
+    width: 50%;
+    padding: 0 .5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    &.one .dot {
+        &:nth-child(1) {
+            grid-row-start: 4;
+            grid-column-start: 2;
+        }
+    }
+
+    &.two .dot {
+        &:nth-child(1) {
+            grid-row-start: 2;
+        }
+
+        &:nth-child(2) {
+            grid-row-start: 6;
+            grid-column-start: 3;
+        }
+    }
+
+    &.three .dot {
+        &:nth-child(1) {
+            grid-row-start: 2;
+        }
+
+        &:nth-child(2) {
+            grid-row-start: 4;
+            grid-column-start: 2;
+        }
+
+        &:nth-child(3) {
+            grid-row-start: 6;
+            grid-column-start: 3;
+        }
+    }
+
+    &.four .dot {
+        &:nth-child(1),
+        &:nth-child(2) {
+            grid-row-start: 2;
+        }
+
+        &:nth-child(2) {
+            grid-column-start: 3;
+        }
+
+        &:nth-child(3) {
+            grid-row-start: 6;
+            grid-column-start: 1;
+        }
+
+        &:nth-child(4) {
+            grid-row-start: 6;
+            grid-column-start: 3;
+        }
+    }
+
+    &.five .dot {
+        &:nth-child(1),
+        &:nth-child(2) {
+            grid-row-start: 2;
+        }
+
+        &:nth-child(2) {
+            grid-column-start: 3;
+        }
+
+        &:nth-child(3) {
+            grid-row-start: 4;
+            grid-column-start: 2;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            grid-row-start: 6;
+        }
+
+        &:nth-child(5) {
+            grid-column-start: 3;
+        }
+    }
+
+    &.six .dot {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            grid-row-start: 2;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            grid-row-start: 6;
+        }
+    }
+}
