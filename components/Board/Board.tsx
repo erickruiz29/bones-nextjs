@@ -6,7 +6,7 @@ interface PlaceableLocation {
     col: number
 }
 
-interface Placeables {
+export interface Placeables {
     top?: PlaceableLocation
     bottom?: PlaceableLocation
     left?: PlaceableLocation
