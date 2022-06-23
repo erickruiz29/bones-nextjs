@@ -1,0 +1,16 @@
+.board {
+    position: relative;
+    border: 1rem solid brown;
+    height: 30rem;
+    width: 100%;
+    overflow: auto;
+
+    &__surface {
+        display: grid;
+        grid-template-columns: repeat(20, 4rem);
+        grid-template-rows: repeat(10, 4rem);
+        overflow: auto;
+        position: absolute;
+        padding: 2rem 0;
+    }
+}

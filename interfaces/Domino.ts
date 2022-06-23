@@ -1,16 +1,3 @@
-export interface DominoProps {
-    extraClass?: string
-    dominoId: DominoId
-    rotation?: RotationAmount
-}
-
-export const enum RotationAmount {
-    none = 0,
-    rotRight = 90,
-    flip = 180,
-    rotLeft = 270,
-}
-
 export const enum DominoId {
     Zero_Zero = '0.0',
     Zero_One = '0.1',

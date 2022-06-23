@@ -8,11 +8,31 @@
     padding: .25rem 0;
     border-radius: .5rem;
     margin: .5rem;
+    grid-column: span 2;
+    transition: all 0.2s ease;
+
+    &.clockwise {
+        grid-column: span 1;
+        rotate: 90deg;
+        transform-origin: top;
+        transform: translate(25%);
+    }
+
+    &.counterClockwise {
+        grid-column: span 1;
+        rotate: 270deg;
+        transform-origin: bottom;
+        transform: translate(25%);
+    }
+
+    &.flipped {
+        rotate: 180deg;
+    }
 }
 
 .dot {
-    height: 100%;
-    width: 50%;
+    height: 140%;
+    width: 70%;
     background-color: black;
     border-radius: 1rem;
     margin: 0 auto;
